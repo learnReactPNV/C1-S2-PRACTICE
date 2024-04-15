@@ -74,7 +74,7 @@ function removeProductFromCart(productId) {
     if (cart.id == productId && cart.quantity >= 2) {
       cart.quantity-=1
     }else if (cart.id == productId && cart.quantity == 1) {
-      SHOPPING_CART.pop(cart.id)
+      SHOPPING_CART.splice(cart.id);
     }
   });
   return SHOPPING_CART;
